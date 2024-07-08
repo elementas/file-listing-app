@@ -1,0 +1,10 @@
+services:
+  listing-app:
+    container_name: listing-app
+    build:
+      context: .
+    volumes:
+      - './input:/home/node/app/input'
+    ports:
+      - '3000:3000'
+    restart: unless-stopped
